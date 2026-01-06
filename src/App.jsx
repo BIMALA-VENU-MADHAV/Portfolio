@@ -17,7 +17,7 @@ function App() {
     <div className="min-h-screen flex flex-col bg-black text-white">
       <Header />
 
-      <main className="flex-grow px-6 py-24">
+      <main className="flex-grow px-6 py-18">
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />

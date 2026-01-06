@@ -105,14 +105,14 @@ const Home = () => {
 
         <div className="flex items-center gap-4 pt-4">
           <a
-            href="/project"
+            href="/projects"
             className="px-6 py-2 border border-white text-base rounded-full hover:bg-white hover:text-black transition"
           >
             View Work
           </a>
           <a
             href="/resume"
-            className="px-6 py-2 border border-white/40 text-base rounded-full hover:border-white transition"
+            className="px-6 py-2 border border-white text-base rounded-full hover:bg-white hover:text-black transition"
           >
             Resume
           </a>

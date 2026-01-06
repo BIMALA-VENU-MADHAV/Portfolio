@@ -93,7 +93,7 @@ const Project = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 border border-white/40 text-sm rounded-full hover:border-white transition"
+                    className="px-4 py-2 border border-white text-sm rounded-full hover:bg-white hover:text-black transition"
                   >
                     GitHub
                   </a>
