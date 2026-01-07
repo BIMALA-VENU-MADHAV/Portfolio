@@ -9,14 +9,19 @@ import About from "./Pages/About";
 import Project from "./Pages/Project";
 import Certificate from "./Pages/Certificate";
 import Resume from "./Pages/Resume";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   const location = useLocation();
 
+  const isNotFound =
+    !["/", "/about", "/projects", "/certificates", "/resume"].includes(
+      location.pathname
+    );
+
   return (
-    
     <div className="min-h-screen flex flex-col bg-black text-white">
-      <Header />
+      {!isNotFound && <Header />}
 
       <main className="flex-grow px-6 py-18">
         <AnimatePresence mode="wait">
@@ -26,11 +31,12 @@ function App() {
             <Route path="/projects" element={<Project />} />
             <Route path="/certificates" element={<Certificate />} />
             <Route path="/resume" element={<Resume />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
       </main>
 
-      <Footer />
+      {!isNotFound && <Footer />}
     </div>
   );
 }
