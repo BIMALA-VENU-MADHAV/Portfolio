@@ -14,6 +14,7 @@ function App() {
   const location = useLocation();
 
   return (
+    
     <div className="min-h-screen flex flex-col bg-black text-white">
       <Header />
 
