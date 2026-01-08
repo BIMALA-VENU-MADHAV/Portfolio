@@ -13,40 +13,49 @@ const Home = () => {
   const [slogan, setSlogan] = useState("");
   const [sloganIndex, setSloganIndex] = useState(0);
 
+  
   useEffect(() => {
     const current = roles[roleIndex];
+
     const timeout = setTimeout(() => {
       if (!deleting) {
         setText(current.slice(0, charIndex + 1));
-        setCharIndex(charIndex + 1);
+        setCharIndex((prev) => prev + 1);
+
         if (charIndex + 1 === current.length) {
-          setTimeout(() => setDeleting(true), 1200);
+          setTimeout(() => setDeleting(true), 1000);  
         }
       } else {
         setText(current.slice(0, charIndex - 1));
-        setCharIndex(charIndex - 1);
-        if (charIndex === 0) {
+        setCharIndex((prev) => prev - 1);
+
+        if (charIndex - 1 === 0) {
+           
           setDeleting(false);
-          setRoleIndex((roleIndex + 1) % roles.length);
+          setRoleIndex((prev) => (prev + 1) % roles.length);
+          setCharIndex(0);
         }
       }
-    }, deleting ? 50 : 90);
+    }, deleting ? 40 : 80);
 
     return () => clearTimeout(timeout);
   }, [charIndex, deleting, roleIndex]);
 
+ 
   useEffect(() => {
     if (sloganIndex < sloganText.length) {
       const t = setTimeout(() => {
-        setSlogan((p) => p + sloganText[sloganIndex]);
-        setSloganIndex(sloganIndex + 1);
+        setSlogan((prev) => prev + sloganText[sloganIndex]);
+        setSloganIndex((prev) => prev + 1);
       }, 80);
+
       return () => clearTimeout(t);
     }
   }, [sloganIndex]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* background layers */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-black" />
       <div className="absolute inset-0 opacity-[0.06] pointer-events-none bg-[url('data:image/svg+xml,%3Csvg viewBox=%270 0 200 200%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cfilter id=%27n%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%270.8%27 numOctaves=%274%27 stitchTiles=%27stitch%27/%3E%3C/filter%3E%3Crect width=%27200%27 height=%27200%27 filter=%27url(%23n)%27 opacity=%270.4%27/%3E%3C/svg%3E')]" />
 
@@ -56,6 +65,7 @@ const Home = () => {
         transition={{ duration: 0.8 }}
         className="relative z-10 flex flex-col items-center text-center gap-8 -translate-y-12"
       >
+        {/* profile image */}
         <motion.div
           animate={{ y: [0, -12, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
@@ -73,6 +83,7 @@ const Home = () => {
           Bimala Venu Madhav
         </h1>
 
+        {/* roles */}
         <motion.h2
           animate={{
             textShadow: [
@@ -99,10 +110,12 @@ const Home = () => {
           applications with modern technologies and clean architecture.
         </p>
 
+        {/* slogan */}
         <p className="text-base sm:text-lg text-gray-400 tracking-widest min-h-[24px]">
           {slogan}
         </p>
 
+        {/* actions */}
         <div className="flex items-center gap-4 pt-4">
           <a
             href="/projects"
