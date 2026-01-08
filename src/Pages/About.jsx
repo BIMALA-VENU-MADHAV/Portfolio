@@ -43,8 +43,8 @@ const About = () => {
 
         <div className="space-y-6 text-sm sm:text-base text-gray-400 leading-relaxed">
           <p>
-            I’m a Software Engineer experienced in building scalable, efficient
-            full-stack applications. My core skill set includes{" "}
+            I’m a Software Developer experienced in building scalable, efficient
+             applications. My core skill set includes{" "}
             <span className="text-white">
               JavaScript, Python, Java, SQL, HTML, and CSS
             </span>
