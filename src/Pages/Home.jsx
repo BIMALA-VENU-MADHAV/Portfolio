@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const roles = ["Software Engineer", "MERN Stack Developer", "Tech Enthusiast"];
+const roles = ["Software Developer", "MERN Stack Developer", "Tech Enthusiast"];
 const sloganText = "Building Solutions, One Line at a Time.";
 
 const Home = () => {
@@ -106,7 +106,7 @@ const Home = () => {
         </motion.h2>
 
         <p className="max-w-xl text-sm sm:text-base text-gray-400 leading-relaxed">
-          I’m a Software Engineer experienced in building scalable full-stack web
+          I’m a Software Developer experienced in building scalable full-stack web
           applications with modern technologies and clean architecture.
         </p>
 
