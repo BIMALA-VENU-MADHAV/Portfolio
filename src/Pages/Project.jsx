@@ -41,6 +41,15 @@ const projects = [
     live: "https://tictactoegame7.netlify.app/",
     github: "https://github.com/BIMALA-VENU-MADHAV/TicTacToe",
   },
+  {
+    title: "Dog Breed Classification",
+    description:
+      "AI and ML model to classify dog breeds using image recognition.",
+    image: "/projects/dogbreed.png",
+    live: "https://dog-breed-classification-49ux.onrender.com/",
+    github: "https://github.com/BIMALA-VENU-MADHAV/Dog-Breed-Classification",
+
+  },
 ];
 
 const Project = () => {
