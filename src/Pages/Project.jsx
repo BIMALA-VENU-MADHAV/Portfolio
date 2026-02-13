@@ -50,6 +50,14 @@ const projects = [
     github: "https://github.com/BIMALA-VENU-MADHAV/Dog-Breed-Classification",
 
   },
+  {
+    title: "House Rent Prediction",
+    description:
+      "AI and ML model to predict house rent prices based on features.",
+    image: "/projects/houserent.png",
+    live: "https://house-rent-prediction-uizh.onrender.com",
+    github: "https://github.com/BIMALA-VENU-MADHAV/House-Rent-Prediction",
+  },
 ];
 
 const Project = () => {
