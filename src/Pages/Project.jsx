@@ -62,7 +62,7 @@ const projects = [
 
 const Project = () => {
   return (
-    <section className="min-h-screen px-6 py-32">
+    <section className="min-h-screen px-6 py-20">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-bold tracking-widest text-center mb-20">
           PROJECTS

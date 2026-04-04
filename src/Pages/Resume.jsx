@@ -13,13 +13,17 @@ const Resume = () => {
   }, [open]);
 
   return (
-    <section className="min-h-screen px-6 py-32 flex justify-center">
+    <section className="min-h-screen px-6 py-20 flex justify-center">
+       
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="w-full max-w-5xl flex flex-col items-center gap-10"
+        className="w-full max-w-5xl flex flex-col items-center gap-8"
       >
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-widest text-center mb-20">
+          RESUME
+        </h1>
         <a
           href="/BIMALA VENU MADHAV.pdf"
           target="_blank"
