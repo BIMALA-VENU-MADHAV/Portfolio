@@ -73,7 +73,7 @@ const Home = () => {
           className="w-44 h-44 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 overflow-hidden"
         >
           <img
-            src="/profile.jpg"
+            src="/profile.jpeg"
             alt="Profile"
             className="w-full h-full object-cover"
           />
