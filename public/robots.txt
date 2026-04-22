@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bimalavenumadhav.vercel.app/sitemap.xml
