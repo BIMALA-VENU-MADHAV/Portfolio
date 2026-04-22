@@ -133,9 +133,11 @@ const Home = () => {
           className="w-44 h-44 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 overflow-hidden"
         >
           <img
-            src="/profile.jpeg"
-            alt="Profile"
+            src="/profile.webp"
+            alt="Bimala Venu Madhav"
             className="w-full h-full object-cover"
+             loading="eager"
+            fetchpriority="high"
           />
         </motion.div>
 
