@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const certificates = [
   {
@@ -35,6 +36,48 @@ const certificates = [
 
 const Certificate = () => {
   return (
+    
+    <>
+      <Helmet>
+        <title>Certificates | Bimala Venu Madhav</title>
+
+        <meta
+          name="description"
+          content="View certifications of Bimala Venu Madhav including JavaScript, Full Stack Development, Java, SQL, and web development training."
+        />
+
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://bimalavenumadhav.vercel.app/certificates" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Certificates | Bimala Venu Madhav" />
+        <meta
+          property="og:description"
+          content="Explore my certifications in web development, programming, and full-stack technologies."
+        />
+        <meta
+          property="og:image"
+          content="https://bimalavenumadhav.vercel.app/profile.jpeg"
+        />
+        <meta
+          property="og:url"
+          content="https://bimalavenumadhav.vercel.app/certificates"
+        />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Certificates | Bimala Venu Madhav" />
+        <meta
+          name="twitter:description"
+          content="Certifications in JavaScript, full-stack development, Java, SQL, and more."
+        />
+        <meta
+          name="twitter:image"
+          content="https://bimalavenumadhav.vercel.app/profile.jpeg"
+        />
+      </Helmet>
+
     <section className="min-h-screen px-6 py-20">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-bold tracking-widest text-center mb-20">
@@ -85,6 +128,7 @@ const Certificate = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

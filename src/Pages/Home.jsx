@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const roles = ["Software Developer", "MERN Stack Developer", "Tech Enthusiast"];
 const sloganText = "Building Solutions, One Line at a Time.";
@@ -13,7 +14,7 @@ const Home = () => {
   const [slogan, setSlogan] = useState("");
   const [sloganIndex, setSloganIndex] = useState(0);
 
-  
+
   useEffect(() => {
     const current = roles[roleIndex];
 
@@ -23,14 +24,14 @@ const Home = () => {
         setCharIndex((prev) => prev + 1);
 
         if (charIndex + 1 === current.length) {
-          setTimeout(() => setDeleting(true), 1000);  
+          setTimeout(() => setDeleting(true), 1000);
         }
       } else {
         setText(current.slice(0, charIndex - 1));
         setCharIndex((prev) => prev - 1);
 
         if (charIndex - 1 === 0) {
-           
+
           setDeleting(false);
           setRoleIndex((prev) => (prev + 1) % roles.length);
           setCharIndex(0);
@@ -41,7 +42,7 @@ const Home = () => {
     return () => clearTimeout(timeout);
   }, [charIndex, deleting, roleIndex]);
 
- 
+
   useEffect(() => {
     if (sloganIndex < sloganText.length) {
       const t = setTimeout(() => {
@@ -53,7 +54,66 @@ const Home = () => {
     }
   }, [sloganIndex]);
 
+
   return (
+    <>
+
+     <Helmet>
+    <title>Bimala Venu Madhav | MERN Stack Developer</title>
+
+    <meta
+      name="description"
+      content="Bimala Venu Madhav is a MERN stack developer specializing in React, Node.js, and full-stack web applications. Explore projects, skills, and experience."
+    />
+
+    <meta name="author" content="Bimala Venu Madhav" />
+    <meta name="robots" content="index, follow" />
+
+    <meta
+      name="keywords"
+      content="Bimala Venu Madhav, MERN Developer, React Developer, Portfolio, Full Stack Developer"
+    />
+
+    <meta name="author" content="Bimala Venu Madhav" />
+    <link rel="canonical" href="https://bimalavenumadhav.vercel.app/" />
+
+    {/* Open Graph */}
+    <meta property="og:title" content="Bimala Venu Madhav | Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore my projects, skills, and experience as a MERN stack developer."
+    />
+    <meta property="og:image" content="https://bimalavenumadhav.vercel.app/profile.jpeg" />
+    <meta property="og:url" content="https://bimalavenumadhav.vercel.app/" />
+    <meta property="og:type" content="website" />
+
+    {/* Twitter */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bimala Venu Madhav Portfolio" />
+    <meta
+      name="twitter:description"
+      content="MERN stack developer portfolio showcasing projects and skills."
+    />
+    <meta name="twitter:image" content="https://bimalavenumadhav.vercel.app/profile.jpeg" />
+
+    <script type="application/ld+json">
+      {`
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Bimala Venu Madhav",
+      "url": "https://bimalavenumadhav.vercel.app/",
+      "sameAs": [
+        "https://github.com/BIMALA-VENU-MADHAV",
+        "https://www.linkedin.com/in/bimala-venu-madhav-731a30334"
+      ],
+      "jobTitle": "MERN Stack Developer"
+    }
+    `}
+    </script>
+
+  </Helmet>
+
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* background layers */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-black" />
@@ -132,6 +192,7 @@ const Home = () => {
         </div>
       </motion.div>
     </section>
+    </>
   );
 };
 

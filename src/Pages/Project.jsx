@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const projects = [
   {
@@ -62,6 +63,47 @@ const projects = [
 
 const Project = () => {
   return (
+    <>
+    <Helmet>
+        <title>Projects | Bimala Venu Madhav</title>
+
+        <meta
+          name="description"
+          content="Explore projects by Bimala Venu Madhav including MERN stack apps, AI/ML models, and modern web applications."
+        />
+
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://bimalavenumadhav.vercel.app/projects" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Projects | Bimala Venu Madhav" />
+        <meta
+          property="og:description"
+          content="View my portfolio projects including full-stack apps, AI/ML models, and web applications."
+        />
+        <meta
+          property="og:image"
+          content="https://bimalavenumadhav.vercel.app/profile.jpeg"
+        />
+        <meta
+          property="og:url"
+          content="https://bimalavenumadhav.vercel.app/projects"
+        />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Projects | Bimala Venu Madhav" />
+        <meta
+          name="twitter:description"
+          content="Explore MERN stack, AI/ML, and web development projects."
+        />
+        <meta
+          name="twitter:image"
+          content="https://bimalavenumadhav.vercel.app/profile.jpeg"
+        />
+      </Helmet>
+
     <section className="min-h-screen px-6 py-20">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-bold tracking-widest text-center mb-20">
@@ -121,6 +163,7 @@ const Project = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

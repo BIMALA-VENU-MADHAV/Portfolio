@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Resume = () => {
   const [open, setOpen] = useState(false);
@@ -13,6 +14,47 @@ const Resume = () => {
   }, [open]);
 
   return (
+    <>
+      <Helmet>
+        <title>Resume | Bimala Venu Madhav</title>
+
+        <meta
+          name="description"
+          content="View and download the resume of Bimala Venu Madhav, a MERN stack developer skilled in React, Node.js, MongoDB, and full-stack development."
+        />
+
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://bimalavenumadhav.vercel.app/resume" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Resume | Bimala Venu Madhav" />
+        <meta
+          property="og:description"
+          content="Download my resume and explore my skills, experience, and projects as a MERN stack developer."
+        />
+        <meta
+          property="og:image"
+          content="https://bimalavenumadhav.vercel.app/Resume_preview.png"
+        />
+        <meta
+          property="og:url"
+          content="https://bimalavenumadhav.vercel.app/resume"
+        />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Resume | Bimala Venu Madhav" />
+        <meta
+          name="twitter:description"
+          content="Download my resume and explore my experience as a MERN stack developer."
+        />
+        <meta
+          name="twitter:image"
+          content="https://bimalavenumadhav.vercel.app/Resume_preview.png"
+        />
+      </Helmet>
+
     <section className="min-h-screen px-6 py-20 flex justify-center">
        
       <motion.div
@@ -80,6 +122,7 @@ const Resume = () => {
         </AnimatePresence>
       </motion.div>
     </section>
+    </>
   );
 };
 

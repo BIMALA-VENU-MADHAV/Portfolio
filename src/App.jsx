@@ -7,6 +7,7 @@ import Footer from "./Components/Footer";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Project from "./Pages/Project";
+ 
 import Certificate from "./Pages/Certificate";
 import Resume from "./Pages/Resume";
 import NotFound from "./Pages/NotFound";
@@ -15,7 +16,7 @@ function App() {
   const location = useLocation();
 
   const isNotFound =
-    !["/", "/about", "/projects", "/certificates", "/resume"].includes(
+    !["/", "/about", "/projects", "/experience", "/certificates", "/resume"].includes(
       location.pathname
     );
 

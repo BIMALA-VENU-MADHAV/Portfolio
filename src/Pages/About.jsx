@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import {
   FaJs,
   FaPython,
@@ -30,6 +31,47 @@ const techStack = [
 
 const About = () => {
   return (
+    <>
+    <Helmet>
+        <title>About | Bimala Venu Madhav</title>
+
+        <meta
+          name="description"
+          content="Learn about Bimala Venu Madhav, a MERN stack developer skilled in React, Node.js, MongoDB, and modern web technologies."
+        />
+
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://bimalavenumadhav.vercel.app/about" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="About | Bimala Venu Madhav" />
+        <meta
+          property="og:description"
+          content="Discover my skills, experience, and technologies I use as a MERN stack developer."
+        />
+        <meta
+          property="og:image"
+          content="https://bimalavenumadhav.vercel.app/profile.jpeg"
+        />
+        <meta
+          property="og:url"
+          content="https://bimalavenumadhav.vercel.app/about"
+        />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About | Bimala Venu Madhav" />
+        <meta
+          name="twitter:description"
+          content="MERN stack developer with expertise in full-stack web development."
+        />
+        <meta
+          name="twitter:image"
+          content="https://bimalavenumadhav.vercel.app/profile.jpeg"
+        />
+      </Helmet>
+
     <section className="min-h-screen flex items-center justify-center px-6 py-20">
       <motion.div
         initial={{ opacity: 0, y: 60 }}
@@ -93,6 +135,7 @@ const About = () => {
         </div>
       </motion.div>
     </section>
+    </>
   );
 };
 

@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
 
-    <style>
-      #preloader {
-        position: fixed;
-        inset: 0;
-        background: black;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: "PT Mono", monospace;
-        z-index: 9999;
-        opacity: 1;
-        transition: opacity 0.5s ease;
-      }
+<head>
+  <title>Bimala Venu Madhav Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="/favicon.ico" />
 
-      #preloader.hidden {
-        opacity: 0;
-        pointer-events: none;
-      }
-    </style>
-  </head>
+  <style>
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "PT Mono", monospace;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
 
-  <body>
-    <div id="preloader">LOADING</div>
-    <div id="root"></div>
+    #preloader.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
 
-    <script>
-      window.addEventListener("load", () => {
-        setTimeout(() => {
-          document.getElementById("preloader").classList.add("hidden");
-        }, 700);
-      });
-    </script>
+<body>
+  <div id="preloader">LOADING</div>
+  <div id="root"></div>
 
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("preloader").classList.add("hidden");
+      }, 700);
+    });
+  </script>
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
