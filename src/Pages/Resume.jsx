@@ -79,7 +79,7 @@ const Resume = () => {
           src="/Resume_preview.png"
           alt="Resume Preview"
           onClick={() => setOpen(true)}
-          className="w-full max-w-3xl border border-white/20 rounded-lg shadow-lg cursor-pointer"
+          className="w-full max-w-3xl h-auto object-contain border border-white/20 rounded-lg shadow-lg cursor-pointer"
         />
 
         <a
