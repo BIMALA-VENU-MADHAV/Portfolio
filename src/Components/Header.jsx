@@ -19,9 +19,14 @@ const Header = () => {
       <nav className="flex items-center justify-between px-6 py-5">
         <NavLink
           to="/"
-          className="text-xl font-bold tracking-wide whitespace-nowrap"
+          className="flex items-center gap-2 text-xl font-bold tracking-wide whitespace-nowrap"
           onClick={() => setOpen(false)}
         >
+          <img
+            src="logo.png"
+            alt="logo"
+            className="w-6 h-6"
+          />
           Portfolio
         </NavLink>
 
