@@ -67,6 +67,14 @@ const projects = [
     live: "https://tictactoegame7.netlify.app/",
     github: "https://github.com/BIMALA-VENU-MADHAV/TicTacToe",
   },
+  {
+    title: "Aura Music Player",
+    description:
+      "A modern music player application with playlist management and audio controls.",
+    image: "/projects/aura.png",
+    live: "https://auramusicplayer-7.vercel.app/",
+    github: "https://github.com/BIMALA-VENU-MADHAV/Aura",
+  }
 ];
 
 const Project = () => {
