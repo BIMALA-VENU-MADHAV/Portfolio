@@ -79,7 +79,7 @@ const Resume = () => {
           src="/Resume_preview.png"
           alt="Resume Preview"
           onClick={() => setOpen(true)}
-          className="w-full max-w-3xl h-auto object-contain border border-white/20 rounded-lg shadow-lg cursor-pointer"
+          className="w-full max-w-10xl h-auto object-contain border border-white/20 rounded-lg shadow-lg cursor-pointer"
         />
 
         <a
@@ -107,7 +107,7 @@ const Resume = () => {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl"
+                className="max-h-[100vh] max-w-[90vw] rounded-lg shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
               />
 

@@ -137,7 +137,7 @@ const Home = () => {
             alt="Bimala Venu Madhav"
             className="w-full h-full object-cover"
              loading="eager"
-            fetchpriority="high"
+            fetchPriority="high"
           />
         </motion.div>
 

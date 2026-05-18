@@ -16,26 +16,22 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/50 border-b border-white/10">
-      <nav className="flex items-center justify-between px-6 py-5">
+      <nav className="flex items-center justify-between px-4 sm:px-6 lg:px-10 py-5">
         <NavLink
           to="/"
-          className="flex items-center gap-2 text-xl font-bold tracking-wide whitespace-nowrap"
+          className="flex items-center gap-2 text-lg sm:text-xl font-bold tracking-wide whitespace-nowrap shrink-0"
           onClick={() => setOpen(false)}
         >
-          <img
-            src="logo.png"
-            alt="logo"
-            className="w-6 h-6"
-          />
-          Portfolio
+          <img src="/logo.png" alt="logo" className="w-6 h-6 shrink-0" />
+          <span>Portfolio</span>
         </NavLink>
 
-        <ul className="hidden md:flex items-center space-x-12">
+        <ul className="hidden lg:flex items-center gap-8 xl:gap-12">
           {navLinks.map((link) => (
             <li key={link.name} className="relative">
               <NavLink
                 to={link.path}
-                className="text-base tracking-wide hover:text-gray-400 transition"
+                className="text-base tracking-wide hover:text-gray-400 transition whitespace-nowrap"
               >
                 {link.name}
               </NavLink>
@@ -55,7 +51,7 @@ const Header = () => {
               href="https://github.com/BIMALA-VENU-MADHAV"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-4 px-4 py-2 border border-white text-base rounded-full hover:bg-white hover:text-black transition"
+              className="ml-2 px-4 py-2 border border-white text-base rounded-full hover:bg-white hover:text-black transition whitespace-nowrap"
             >
               GitHub
             </a>
@@ -63,8 +59,9 @@ const Header = () => {
         </ul>
 
         <button
-          className="md:hidden z-50 cursor-pointer"
+          className="lg:hidden z-50 cursor-pointer"
           onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
         >
           <motion.div animate={open ? "open" : "closed"} className="space-y-1.5">
             <motion.span
@@ -90,7 +87,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-black/70 backdrop-blur-md border-t border-white/10 px-6 py-8 space-y-6"
+            className="lg:hidden bg-black/80 backdrop-blur-xl border-t border-white/10 px-6 py-8 space-y-6"
           >
             {navLinks.map((link, i) => (
               <motion.li
