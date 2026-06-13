@@ -17,13 +17,13 @@ import {
 import { SiMongodb, SiMysql, SiVercel, SiRender } from "react-icons/si";
 
 const techStack = [
-  { icon: FaJs, name: "JavaScript", color: "#F7DF1E" },
   { icon: FaPython, name: "Python", color: "#3776AB" },
   { icon: FaJava, name: "Java", color: "#ED8B00" },
   { icon: FaHtml5, name: "HTML5", color: "#E34F26" },
   { icon: FaCss3Alt, name: "CSS3", color: "#1572B6" },
   { icon: FaReact, name: "React.js", color: "#61DAFB" },
   { icon: FaNodeJs, name: "Node.js", color: "#339933" },
+  { icon: FaJs, name: "JavaScript", color: "#F7DF1E" },
   { icon: SiMongodb, name: "MongoDB", color: "#47A248" },
   { icon: SiMysql, name: "MySQL", color: "#4479A1" },
   { icon: FaGitAlt, name: "Git", color: "#F05032" },
